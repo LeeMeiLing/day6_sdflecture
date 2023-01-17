@@ -79,5 +79,8 @@ public final class App {
         MyRunnableInterface<String> concatString = (a,b) -> { return a + b; };
         System.out.println("concatString: " + concatString.process("hello"," world"));
         
+
+        MyMessageInterface printString = (a) -> System.out.println(a);
+        printString.printMessage("Lets take a break");
     }
 }
