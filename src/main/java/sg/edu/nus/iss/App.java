@@ -67,7 +67,7 @@ public final class App {
 
         executorService.shutdown(); 
 
-        // using lambda expression to implement interface
+        // using lambda expression to implement functional interface (only one method signature)
         MyRunnableInterface<Integer> addOperation = (a,b) -> { return a + b; };
         MyRunnableInterface<Integer> multiplyOperation = (a,b) -> { return a * b; };
         MyRunnableInterface<Integer> minusOperation = (a,b) -> { return a - b; };
