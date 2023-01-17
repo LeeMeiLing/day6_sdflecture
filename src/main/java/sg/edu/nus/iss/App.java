@@ -67,5 +67,17 @@ public final class App {
 
         executorService.shutdown(); 
 
+        // using lambda expression to implement interface
+        MyRunnableInterface<Integer> addOperation = (a,b) -> { return a + b; };
+        MyRunnableInterface<Integer> multiplyOperation = (a,b) -> { return a * b; };
+        MyRunnableInterface<Integer> minusOperation = (a,b) -> { return a - b; };
+
+        System.out.println("addOperation: " + addOperation.process(1,1));
+        System.out.println("multiplyOperation: " + multiplyOperation.process(2,5));
+        System.out.println("minusOperation: " + minusOperation.process(10,2));
+
+        MyRunnableInterface<String> concatString = (a,b) -> { return a + b; };
+        System.out.println("concatString: " + concatString.process("hello"," world"));
+        
     }
 }
